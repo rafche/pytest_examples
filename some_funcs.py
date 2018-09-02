@@ -29,9 +29,18 @@ def sumlist(x_list : list):
     return sum(x_list)
 
 
+def cutlastelement(x_list : list):
+    '''
+    return list without last element
+    :param x_list:
+    :return:
+    '''
+    return x_list[:-1]
+
+
 if __name__ == '__main__':
     print(multiply(3, 4))
     print(square(2))
     print(sumlist([1, 2, 4, 4, 5]))
-
+    print(cutlastelement([1, 2, 3, 4]))
 
