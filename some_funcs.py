@@ -1,3 +1,6 @@
+import pandas as pd
+
+
 def multiply(x, y):
     '''
     multiply x * y
@@ -8,7 +11,7 @@ def multiply(x, y):
     return x * y
 
 
-def power2(x):
+def square(x):
     '''
     build square
     :param x:
@@ -16,6 +19,19 @@ def power2(x):
     '''
     return x * x
 
+
+def sumlist(x_list : list):
+    '''
+    create sum of elements of list
+    :param x_list: list with int / float
+    :return: sum of list
+    '''
+    return sum(x_list)
+
+
 if __name__ == '__main__':
     print(multiply(3, 4))
-    print(power2(2))
+    print(square(2))
+    print(sumlist([1, 2, 4, 4, 5]))
+
+
