@@ -1,10 +1,12 @@
 import random
+import pytest
 
 from some_funcs import square, multiply, sumlist, cutlastelement
 
 
 class TestClass(object):
 
+    @pytest.mark.multiply
     def test_multiply(self):
         '''
         test multiply funciton with hardcoded results
@@ -16,6 +18,7 @@ class TestClass(object):
         assert multiply(3, 5) == 15
         assert multiply(3, 5) == 3 * 5
 
+    @pytest.mark.square
     def test_square(self):
         '''
         test square funciton with one hardcoded resulst
@@ -23,6 +26,7 @@ class TestClass(object):
         '''
         assert square(5) == 25
 
+    @pytest.mark.sumlist
     def test_sumlist(self):
         '''
         test with dynamic functions
@@ -31,6 +35,7 @@ class TestClass(object):
         rand_list = [random.randrange(1, 101, 1) for _ in range(10)]
         assert sum(rand_list) == sumlist(rand_list)
 
+    @pytest.mark.cutlastelement
     def test_cutlastelement(self):
         '''
         test cutlastelement
