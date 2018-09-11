@@ -38,9 +38,18 @@ def cutlastelement(x_list : list):
     return x_list[:-1]
 
 
+def print_statement(x_string):
+    '''
+    print input string
+    :return: True 
+    '''
+    print(x_string)
+    return True
+ 
+
 if __name__ == '__main__':
     print(multiply(3, 4))
     print(square(2))
     print(sumlist([1, 2, 4, 4, 5]))
     print(cutlastelement([1, 2, 3, 4]))
-
+    print(print_statement('some_serious_string'))

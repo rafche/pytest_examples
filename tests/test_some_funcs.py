@@ -1,7 +1,7 @@
 import random
 import pytest
 
-from some_funcs import square, multiply, sumlist, cutlastelement
+from some_funcs import square, multiply, sumlist, cutlastelement, print_statement
 
 
 class TestClass(object):
@@ -43,3 +43,13 @@ class TestClass(object):
         '''
         rand_list = [random.randrange(1, 101, 1) for _ in range(10)]
         assert cutlastelement(rand_list) == rand_list[:-1]
+
+    @pytest.mark.print_statement
+    def test_print_statement(self):
+        '''
+        test printstatement
+        :return:
+        '''
+        assert print_statement('some string')
+
+
